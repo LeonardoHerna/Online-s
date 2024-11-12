@@ -1,0 +1,494 @@
+/* Variables de colores */
+:root {
+  --primary-color: #ff6347; /* Naranja cálido */
+  --secondary-color: #333; /* Gris oscuro */
+  --accent-color: #f4f4f4; /* Gris claro */
+  --text-color: #222; /* Texto principal */
+  --white-color: #fff; /* Blanco */
+  --font-family: 'Arial', sans-serif;
+}
+
+/* Estilos globales */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Enlaces */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: darken(var(--primary-color), 10%);
+}
+
+/* Contenedor principal */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Encabezado */
+header {
+  background-color: var(--secondary-color);
+  padding: 20px 0;
+  color: var(--white-color);
+ display: flex;
+ justify-content: space-between;
+
+}
+
+header .logo {
+  font-size: 1.9rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 40px;
+}
+
+header nav {
+  display: flex;
+  margin-left: 60px;
+  margin-top: 10px;
+
+ 
+  
+}
+
+header nav a {
+ padding-left: 40px;
+ padding-right: 40px;
+  font-size: 1.5rem;
+
+
+}
+
+header nav a:hover {
+  opacity: 80%;
+}
+
+.cta {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 10px 20px;
+  margin: 10px 40px;
+  cursor: pointer;
+  border-radius: 10px ;
+  transition: background-color 0.3s ease;
+  border: none;
+
+}
+
+.cta:hover {
+opacity: 80%;
+
+}
+
+.img-carrito{
+  object-fit: cover;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  margin-left: 40px;
+  margin-top: 10px;
+  margin-right: 40px;
+}
+
+.img-carrito:hover{
+  filter: drop-shadow(0 0 10px var(--primary-color));
+}
+
+/* Hero section */
+#hero {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('/public/Imagenes/campera.JPEG') no-repeat center center/cover;
+  color: var(--white-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+#hero .cta {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+}
+
+/* Estilos para la sección de colección */
+#collection {
+  padding: 50px 20px;
+  background-color: var(--white-color);
+}
+
+#collection h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.collection-item {
+  background-color: var(--accent-color);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.collection-item img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.collection-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.collection-item p {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.btnVerMas{
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 15px 55px;
+  margin: 90px 550px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.5rem;
+}
+
+
+.btn-verCollection{
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 10px 25px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.btn-verCollection:hover{
+  opacity: 80%;
+}
+
+
+
+/* Sección de productos */
+#productos {
+  padding: 30px 0;
+  background-color: var(--white-color);
+  margin-top: 100px;
+  margin-bottom: 100px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#productos h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.producto {
+  background-color: var(--accent-color);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.producto h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.producto p {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.producto button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.producto button:hover {
+  opacity: 80%;
+}
+
+/* Ofertas */
+#ofertas {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 50px 20px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#ofertas h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+#ofertas p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+#ofertas .cta {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  border: none;
+}
+
+#ofertas .cta:hover {
+  background-color: var(--accent-color);
+}
+
+/* Contacto */
+#contacto {
+  padding: 50px 20px;
+  background-color: var(--white-color);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#contacto h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
+}
+
+#contacto form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#contacto form label {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: var(--secondary-color);
+}
+
+#contacto form input,
+#contacto form textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--accent-color);
+  font-size: 1rem;
+}
+
+#contacto form textarea {
+  resize: vertical;
+}
+
+#contacto form button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+#contacto form button:hover {
+ opacity: 80%;
+}
+
+/* Footer */
+footer {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer .social-icons a {
+  margin: 0 10px;
+  color: var(--white-color);
+}
+
+footer .social-icons a:hover {
+  color: var(--primary-color);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .cta {
+    padding: 10px 20px;
+  }
+}
+
+
+/* Transiciones generales */
+.cta, .producto button  {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.cta:hover, .producto button:hover {
+  transform: scale(1.05); /* Leve aumento de tamaño */
+  opacity: 0.9;
+}
+
+.btnVerMas{
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.btnVerMas:hover{
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+/* Animación de imágenes de productos */
+.producto img {
+  transition: transform 0.4s ease;
+
+}
+
+.producto img:hover {
+  transform: scale(1.1); /* Zoom sutil */
+}
+
+/* Animación global para transiciones suaves */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animación para los botones al hacer hover */
+.cta:hover, .producto button:hover, #ofertas .cta:hover, #contacto form button:hover, .btnVerMas:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+}
+
+/* Animación para la sección de héroe */
+#hero {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efecto de desplazamiento en las imágenes de productos */
+.producto img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.producto img:hover {
+  transform: scale(1.05); /* Agranda ligeramente la imagen al pasar el mouse */
+}
+
+/* Animación para los items de la colección al hacer scroll */
+.collection-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease-in-out;
+}
+
+.collection-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Añadir clase cuando los elementos son visibles */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sutil hover en los enlaces del header */
+header nav a:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+

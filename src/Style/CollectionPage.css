@@ -1,0 +1,101 @@
+/* Variables de colores */
+:root {
+    --primary-color: #ff6347; /* Naranja cálido */
+    --secondary-color: #333; /* Gris oscuro */
+    --accent-color: #f4f4f4; /* Gris claro */
+    --text-color: #222; /* Texto principal */
+    --white-color: #fff; /* Blanco */
+  }
+  
+  /* Sección de colección */
+  #collection-page {
+    background-color: var(--accent-color);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 95dvw;
+    height: 105dvw;
+    top: 10px;
+    left: -10px;
+    margin-left: 50px;
+    position: absolute;
+
+  
+  }
+  
+  .collection-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+  }
+  
+  .collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  .collection-item {
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .collection-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .collection-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+  }
+  
+  .collection-item p {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  .collection-item .buy-now-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .collection-item .buy-now-btn:hover {
+    opacity: 80%;
+  }
+  
+  .collection-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .btnClose{
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    padding: 3px;
+    font-size: 20px;
+   border: none;
+   background: none;
+  
+  }
+
+  .btnClose:hover{
+    cursor: pointer;
+    opacity: 50%;
+  }

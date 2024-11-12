@@ -1,0 +1,11 @@
+
+.line-segment {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color); /* Mismo color que el de tu paleta */
+  border-radius: 50%; /* Hace que los puntos se vean redondeados */
+  pointer-events: none; /* Para que no interfiera con el puntero */
+  z-index: -1;
+  transition: left 0.5s ease, top 0.1s ease; /* Suaviza el movimiento */
+}
